@@ -1,0 +1,15 @@
+---
+- hosts: all
+  gather_facts: false
+#  ignore_errors: true
+  tasks:
+        - name: Check the date
+          command: date
+          ignore_errors: true
+        - name: Check the uptime
+          command: uptime
+        - name: Check the CPU
+          command: 
+                lscpu
+  
+
